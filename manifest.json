@@ -1,0 +1,26 @@
+{
+"name": "video-control",
+"description": "videocontrol",
+"version": "5.1.2",
+"manifest_version": 2,
+
+"content_scripts": [
+  {
+    "matches": ["*://youtube.com/*", "*://*.youtube.com/*"],
+    "js": ["contents.js"],
+    "all_frames": false,
+    "run_at": "document_start"
+  }
+],
+"permissions": [
+  "tabs",
+  "contextMenus",
+  "storage",
+  "unlimitedStorage",
+  "webRequest",
+  "webRequestBlocking",
+  "webNavigation",
+  "<all_urls>",
+  "activeTab"
+]
+}
